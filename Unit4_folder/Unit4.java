@@ -33,9 +33,13 @@ public static String stringTimes(String word, int n) {
         System.out.println("Hello, world!");
         System.out.println("stringSplosion " +  stringSplosion("code"));
         System.out.println("stringTimes " +  stringTimes("code",4));
+
         System.out.println("stringSplosion2 " +  stringSplosion("help"));
         System.out.println("stringTimes2 " +  stringTimes("weeeeeee",18));
+
         System.out.println("stringSplosion3 " +  stringSplosion("madeleine"));
         System.out.println("stringTimes3 " +  stringTimes("frenchpeople? ",3));
+
+        stringTimes("round",18);
     }
 }
