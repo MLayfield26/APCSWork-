@@ -1,33 +1,22 @@
 public class IcyHot{
-  public static void main(String[] args){
-  int aTemp1 = -19;
-  int bTemp1 = 120;
-  int aTemp2 = 1;
-  int bTemp2 = 70;
-  int aTemp3 = -6;
-  int bTemp3 = 102;
-  int icy = -1;
-  int hot = 101;
+  public static void testIcyHot(int temp1, int temp2){
+  System.out.print(" Temp1: " +temp1 + " Temp2: " + temp2 + " IcyHot? ");
 
+          if(120 < temp1 || temp1 < -1 || 120 < temp2 || temp2 < -1)
+              System.out.println("Yes");
+          else
+              System.out.println("No");
+      }
 
-
-  if(icy > aTemp1 && bTemp1 > hot)
-  System.out.println("true");
-  else
-  System.out.println("false");
-
-
-  if(icy > aTemp2 && bTemp2 > hot)
-  System.out.println("true");
-  else
-  System.out.println("false");
-
-
-  if(icy > aTemp3 && bTemp3 > hot)
-  System.out.println("true");
-  else
-  System.out.println("false");
-
-  }
+      public static boolean IcyHot(int temp1, int temp2)
+      {
+             return (120 < temp1 || temp1 < -1 || 120 < temp2 || temp2 < -1);
+      }
+      public static void main(String[] args)
+      {
+          testIcyHot(150, 25);
+          testIcyHot(122,-3);
+          testIcyHot(29,30);
+      }
 
   }

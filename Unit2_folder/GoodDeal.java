@@ -1,12 +1,22 @@
-public class Unit4{
+public class GoodDeal{
+  public static void testGoodDeal(int NewPrice, int OGPrice){
+  System.out.print(" NewPrice " +NewPrice + " OGPrice: " + OGPrice + " GoodDeal?");
 
-public static String stringSplosion(String name) {
-  String result = "";
-  //no thank you to codebat which told me i was doing it wrong but i was doing it right
-  //codebat is evil and probably works with the college board
-  for (int i=0; i<name.length(); i++) {
-    result = result + name.substring(0, i+1);
+          if(NewPrice <= OGPrice/4*3)
+              System.out.println("Yes");
+          else
+              System.out.println("No");
+      }
+
+      public static boolean GoodDeal(int NewPrice, int OGPrice)
+      {
+             return (NewPrice <= OGPrice/4*3);
+      }
+      public static void main(String[] args)
+      {
+          testGoodDeal(10, 25);
+          testGoodDeal(30,29);
+          testGoodDeal(29,30);
+      }
+
   }
-  return result;
-}
-}

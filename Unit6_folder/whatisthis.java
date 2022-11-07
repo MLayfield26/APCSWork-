@@ -5,7 +5,7 @@
 
 import processing.core.*;
 import java.util.*;
-
+int cellSize = 10;
 
 public class whatisthis extends PApplet
 {
@@ -16,47 +16,31 @@ public class whatisthis extends PApplet
 
     public void setup()
     {
-        balls = new ArrayList<Ball>();
-        createBall();
+  public static String cells = new int[400/cellSize];
+
+  cells[cells.length/2] = 1;
     }
 
-    public void createBall()
-    {
-        PVector position = new PVector(mouseX,mouseY);
+  public void draw() {
+    for (int i = 0; i < cells.length; i++) {
 
-        PVector velocity = PVector.random2D();
-        velocity.setMag(random(100));
-
-        float radius = random(20);
-        int c = color(random(256), random(256), random(256));
-
-        Ball ball = new Ball(this,
-                             position,
-                             velocity,
-                             radius,
-                             c);
-
-        balls.add(ball);
+    if (cells[i] == 1) {
+      fill(0);
+    } else {
+      fill(255);
     }
-
-    public void draw()
-    {
-        background(255);
-
-        for (Ball ball : balls)
-            ball.display();
-    }
+}
+}
 
     public void keyPressed()
     {
-        for (int i=0; i<1; i++)
-            createBall();
+
     }
 
     public static void main(String[] args)
     {
-        PApplet.main("Project2");
+        PApplet.main("whatisthis");
     }
 
-    private ArrayList<Ball> balls;
+  //  private ArrayList<Ball> balls;
 }
