@@ -1,22 +1,24 @@
 public class IsVampire{
-  public static void testIcyHot(int hour){
-  System.out.print(" Hour: " + hour + "IsVampire");
+  public static void testIsVampire(int hour, boolean expected){
+    boolean result = IsVampire(hour);
+  System.out.print(" Hour: " + hour + ". Expected result:"
+  + expected + ". result: " + result + ". Code works? ");
 
-          if(6 > hour || hour > 22)
+          if(expected == result)
               System.out.println("Yes");
           else
               System.out.println("No");
       }
 
-      public static boolean IcyHot(int hour)
+      public static boolean IsVampire(int hour)
       {
              return (6 > hour || hour > 22);
       }
       public static void main(String[] args)
       {
-          testIcyHot(3);
-          testIcyHot(23);
-          testIcyHot(12);
+          testIsVampire(3, true);
+          testIsVampire(23, true);
+          testIsVampire(12,false);
       }
 
   }

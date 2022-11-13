@@ -1,8 +1,10 @@
 public class GoodDeal{
-  public static void testGoodDeal(int NewPrice, int OGPrice){
-  System.out.print(" NewPrice " +NewPrice + " OGPrice: " + OGPrice + " GoodDeal?");
+  public static void testGoodDeal(int NewPrice, int OGPrice, boolean expected){
+    boolean result = GoodDeal(NewPrice, OGPrice);
+  System.out.print(" NewPrice " +NewPrice + ". OGPrice: " + OGPrice + ". expected result: "
+  + expected + ". result: "+ result + ". Is the expected result = to the result? ");
 
-          if(NewPrice <= OGPrice/4*3)
+          if(result ==expected)
               System.out.println("Yes");
           else
               System.out.println("No");
@@ -14,9 +16,9 @@ public class GoodDeal{
       }
       public static void main(String[] args)
       {
-          testGoodDeal(10, 25);
-          testGoodDeal(30,29);
-          testGoodDeal(29,30);
+          testGoodDeal(10, 25, true);
+          testGoodDeal(30,29, false);
+          testGoodDeal(29,30, false);
       }
 
   }
