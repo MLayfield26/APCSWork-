@@ -1,21 +1,31 @@
-public class Attention {
-  public static void main(String[] args) {
+public class Attention{
 
-//thank you to the internet and random youtube man for clarifing java strings to me
-    String first = "Hey,you!";
-    String second = "Hey,you!";
-    String third = "no";
-    String four = "Hey,you?";
 
-    // comparions1
-    boolean result1 = first.equals(second);
-    System.out.println("Test1:" + result1);
+public static void testAttention(String phrase, String heyYou, boolean expected){
+Boolean result = heyYou.equals(phrase.substring(0, 9));
 
-    // comparison 2
-    boolean result2 = first.equals(third);
-    System.out.println("Test2:" + result2);
+System.out.print("Does " +phrase+ "'s first 9 letters equal: " + heyYou + "? ");
 
-    boolean result3 = first.equals(four);
-    System.out.println("Test3:" + result3);
-  }
+
+
+if(result == expected)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+
+}
+
+
+    public static Boolean Attention(String phrase, String heyYou){
+
+  return(heyYou.equals(phrase.substring(0, 9)) || heyYou.equals(phrase));
+}
+
+    public static void main(String[] args)
+    {
+   testAttention("Hello, viewer!","hey, you!", false);
+     testAttention("hey, you! go away!","hey, you!", true);
+       testAttention("Is this a random sentance here?","hey, you!", false);
+    }
+
 }
