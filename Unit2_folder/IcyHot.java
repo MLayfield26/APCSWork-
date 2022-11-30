@@ -15,6 +15,7 @@ public class IcyHot{
       }
       public static void main(String[] args)
       {
+        System.out.println(IcyHot(9,2));
           testIcyHot(150, 25, true);
           testIcyHot(122,-3, true);
           testIcyHot(29,30, false);
