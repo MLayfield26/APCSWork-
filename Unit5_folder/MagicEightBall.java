@@ -5,6 +5,6 @@ public class MagicEightBall {
 
   public String ask(String question) {
     //question doesnt matter
-    return replies[(replies.length)];
+    return replies[(int)(Math.random() * replies.length)];
   }
 }
