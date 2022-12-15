@@ -1,6 +1,7 @@
 import java.util.*;
 public class filter{
   public static ArrayList<Integer> filterGoodScores(ArrayList<Integer> scores) {
+    //creating new arraylist to put nice scores into DO NOT DELETE MADELEIN
      ArrayList<Integer> highScores = new ArrayList<>();
      for (int score : scores) {
        if (score > 90) {
@@ -17,6 +18,6 @@ public class filter{
      scores.add(85);
 
      ArrayList<Integer> highScores = filterGoodScores(scores);
-     System.out.println(highScores);
+     System.out.println("high/good scores: "highScores);
    }
  }
