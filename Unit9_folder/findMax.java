@@ -1,25 +1,21 @@
-public class ArrayAlgorithms{
-public static ArrayList<String> generateFib(int n){
-        // generate and return list of first n fizz buzz strings
+import java.util.*;
+public class findMax{
+  public double findMax(double[] numbers) {
+      double max = numbers[0];
+      for (int i = 1; i < numbers.length; i++) {
+          if (numbers[i] > max) {
+              max = numbers[i];
+          }
+      }
 
-        ArrayList<String> result = new ArrayList<String>();
+      return max;
+  }
 
-        for (int i=0; i<n; i++){
-            if (i%15 == 0)
-                result.add("FizzBuzz");
-            else if (i%3 == 0)
-                result.add("Fizz");
-            else if (i%5 == 0)
-                result.add("Buzz");
-            else
-                result.add("" + i);
-        }
-
-        return result;
-    }
 
   public static void main(String[] args){
-   ArrayList<String> fizzBuzzOutput = generateFib(30);
+    double[] numbers = {1.2, 3.4, 5.6, 7.8, 9.0};
+    double max = findMax(numbers);
 
+    System.out.println("Max number: " + max);
   }
 }
