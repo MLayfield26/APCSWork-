@@ -1,28 +1,14 @@
-//
-// Rectangle.java
-//
 
 
-public class Rectangle implements vehicle
-{
-    public Rectangle(double w, double h)
-    {
-        this.w = w;
-        this.h = h;
+public class Car implements Vehicle {
+
+    public String name() {
+       return "Car";
+     }
+    public int wheelCount() {
+       return 4;
+      }
+    public boolean isHumanPowered() {
+      return false;
     }
-
-    public String name() {return "Rectangle";}
-
-    public int sideCount()
-    {
-        return 4;
-    }
-
-    public double perimeter()
-    {
-        return 2*w + 2*h;
-    }
-
-    private double w;
-    private double h;
 }

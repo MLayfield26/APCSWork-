@@ -1,5 +1,5 @@
 public interface Vehicle{
     public String name();
     public int wheelCount();
-    public boolean humanPowered();
+    public boolean isHumanPowered();
 }
