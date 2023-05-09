@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colorful Text Website</title>
+  <link href="frog.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .colorful-text {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    .colorful-text:hover {
+      transform: scale(1.2);
+    }
+
+    #word-input {
+      font-size: 24px;
+      padding: 10px;
+    }
+
+    .clicki {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0% { top: 0; left: 0; }
+      25% { top: 0; left: calc(100% - 100px); }
+      50% { top: calc(100% - 100px); left: calc(100% - 100px); }
+      75% { top: calc(100% - 100px); left: 0; }
+      100% { top: 0; left: 0; }
+    }
+  </style>
+  <script>
+    function changeWord() {
+      var word = document.getElementById("word-input").value;
+      var colorfulTexts = document.getElementsByClassName("colorful-text");
+      for (var i = 0; i < colorfulTexts.length; i++) {
+        colorfulTexts[i].innerHTML = "alene " + word;
+      }
+    }
+
+    function changeColor(color) {
+      var colorfulTexts = document.getElementsByClassName("colorful-text");
+      for (var i = 0; i < colorfulTexts.length; i++) {
+        colorfulTexts[i].style.color = color;
+      }
+    }
+  </script>
+</head>
+<body>
+  <audio src="cb.mp3" autoplay loop></audio>
+  <input type="text" id="word-input" placeholder="Enter a word">
+  <button onclick="changeWord()">Change Word</button>
+  <br><br>
+  <select onchange="changeColor(this.value)">
+    <option value="">Select a color</option>
+    <option value="#FF0000">Red</option>
+    <option value="#00FF00">Green</option>
+    <option value="#0000FF">Blue</option>
+    <option value="#FF00FF">Magenta</option>
+    <option value="#FFFF00">Yellow</option>
+    <option value="#00FFFF">Cyan</option>
+    <option value="#FFA500">Orange</option>
+    <option value="#800080">Purple</option>
+  </select>
+  <br><br>
+  <div class="colorful-text" style="color: #FF0000;">alene SUCKS</div>
+  <div class="colorful-text" style="color: #00FF00;">alene SUCKS</div>
+  <div class="colorful-text" style="color: #0000FF;">alene SUCKS</div>
+  <div class="colorful-text" style="color: #FF00FF;">alene SUCKS</div>
+  <div class="colorful-text" style="color: #FFFF00;">alene SUCKS</div>
+
+  <br><br>
+
+  <button onclick="toggleStory()">Toggle Story</button>
+  <div id="story-container">
+    <p>
+
+      Once upon a time in the small town of Studio City, there lived a young woman named Alene.
+      Alene was known for her peculiar eccentricities and her strong attachment to her possessions.
+      She possessed an uncanny fondness for her TI-Inspire Calculator, a prized possession that she carried with her everywhere.
+      Alene's beloved dog, Biscuit, was a mischievous and curious canine with a penchant for chewing on things he shouldn't.
+      One sunny afternoon, while Alene was engrossed in solving complex equations, she carelessly left her TI-Inspire Calculator unattended on the kitchen table.
+      Seizing the opportunity, Biscuit, driven by his canine instincts, couldn't resist the temptation and devoured the calculator.
+      When Alene discovered the fate of her precious gadget, she was devastated.
+      The emotions of anger, frustration, and disbelief overwhelmed her
+
+  </html>
